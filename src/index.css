@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Bayon&display=swap");
+@font-face {
+  font-family: coolGums;
+  src: url("/fonts/cool-gums.ttf");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply bg-primaryPurple;
+  }
+}
+@layer utilities {
+  .wrapper {
+    @apply flex justify-start items-center w-full flex-col;
+  }
+  .contain {
+    @apply flex w-[90%] max-w-[1200px];
+  }
+  .textGr {
+    @apply bg-orangeGr bg-clip-text text-transparent;
+  }
+  .ctaBtn {
+    @apply w-[162px] h-[57px] bg-orangeGr text-white rounded-lg text-lg font-normal leading-[1] border-none;
+  }
+}
