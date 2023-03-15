@@ -1,10 +1,12 @@
 import Hero from "./Hero";
+import History from "./History";
 
 const Landing = () => {
   return (
-    <div>
+    <>
       <Hero />
-    </div>
+      <History />
+    </>
   );
 };
 

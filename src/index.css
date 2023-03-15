@@ -11,6 +11,14 @@
     @apply bg-primaryPurple;
   }
 }
+@layer components {
+  .title {
+    @apply text-[30px] sm:text-[36px] md:text-[48px] textGr font-normal uppercase font-coolGums;
+  }
+  .para {
+    @apply text-white text-lg font-normal;
+  }
+}
 @layer utilities {
   .wrapper {
     @apply flex justify-start items-center w-full flex-col;
