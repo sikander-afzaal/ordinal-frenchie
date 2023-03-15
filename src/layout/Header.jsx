@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [headerToggle, setHeaderToggle] = useState(false);
+  const [headerBg, setHeaderBg] = useState(false);
+  useEffect(() => {
+    const changeBg = () => {
+      if (window.scrollY > 100) {
+        setHeaderBg(true);
+      } else {
+        setHeaderBg(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeBg);
+
+    return () => {
+      window.removeEventListener("scroll", changeBg);
+    };
+  }, []);
+
   return (
-    <header className="wrapper fixed top-0  left-0 z-50">
+    <header
+      className={`wrapper fixed top-0  left-0 z-50 ${
+        headerBg ? "bg-[#2B0A4F]" : ""
+      } transition-all duration-300`}
+    >
       {headerToggle && (
         <div
           className="fixed w-full h-full top-0 left-0 bg-black opacity-60 sm:hidden block z-[89]"
@@ -20,28 +41,28 @@ const Header = () => {
           } top-0 sm:flex-row flex-col pt-[6rem] pb-[3rem] px-[3rem] sm:p-0 bg-[#2B0A4F] sm:bg-transparent transition-all duration-700 z-[90] overflow-y-auto sm:overflow-visible`}
         >
           <a
-            href="#"
+            href="#home"
             onClick={() => setHeaderToggle(false)}
             className="text-white text-xl sm:text-lg font-normal uppercase"
           >
             Home
           </a>
           <a
-            href="#"
+            href="#about"
             onClick={() => setHeaderToggle(false)}
             className="text-white text-xl sm:text-lg font-normal uppercase"
           >
             About us
           </a>
           <a
-            href="#"
+            href="#tokenomics"
             onClick={() => setHeaderToggle(false)}
             className="text-white text-xl sm:text-lg font-normal uppercase"
           >
             Tokenomics
           </a>
           <a
-            href="#"
+            href="#roadmap"
             onClick={() => setHeaderToggle(false)}
             className="text-white text-xl sm:text-lg font-normal uppercase"
           >

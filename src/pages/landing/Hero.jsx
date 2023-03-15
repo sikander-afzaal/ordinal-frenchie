@@ -2,7 +2,20 @@ import Button from "../../components/Button";
 
 const Hero = () => {
   return (
-    <div className="wrapper py-[90px] xl:py-[150px] relative isolate xl:h-screen min-h-[850px]">
+    <div
+      id="home"
+      className="wrapper py-[90px] xl:py-[150px] relative isolate xl:h-screen min-h-[850px]"
+    >
+      <img
+        src="/blob-left.png"
+        className="absolute -z-20 sm:block hidden top-[45%] xl:top-1/2 2xl:top-[70%] left-0"
+        alt=""
+      />
+      <img
+        src="/blob-right.png"
+        className="absolute -z-20 sm:block hidden top-[45%] xl:top-1/2 2xl:top-[70%] right-0"
+        alt=""
+      />
       <img
         src="/hero-curve.png"
         className="absolute left-0 top-0 w-full h-[80%] xl:h-auto object-cover -z-10"
