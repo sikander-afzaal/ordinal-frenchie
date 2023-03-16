@@ -15,14 +15,74 @@ const Roadmap = () => {
         "Etherscan Verification",
       ],
     },
+    {
+      stage: "02",
+      achieve: [
+        "Twitter Campaign",
+        "Whitepaper Release",
+        "Coinmarketcap Listing",
+        "Coingecko Listing",
+        "1,000 Holders",
+        "Contest & Giveaways",
+        "Ordinal NFT Marketplace",
+        "Ordinal NFT Collection",
+        "Telegram Campaign",
+        "Ordinal NFT Partnerships",
+      ],
+    },
+    {
+      stage: "03",
+      achieve: [
+        "Smart Contract Audit/KYC",
+        "Ambassador Reward System",
+        "Launchpad/Incubator",
+        "Launchpad App (IOS/ANDROID)",
+        "Re-Brand",
+        "Press Release",
+        "Ordinal Generator",
+        "Ordinal Inscribe Tool",
+        "Youtube Campaign",
+        "5,000 Holders",
+      ],
+    },
+    {
+      stage: "04",
+      achieve: [
+        "Legal Advise",
+        "Allowlist/Collab Platform",
+        "Wallet",
+        "100k Twitter Followers",
+        "Brand Awareness Campaign",
+        "Partnerships",
+        "DEX/Swap Development",
+        "Ordinal Analytics Tool",
+        "20,000",
+        "Layer 2 Blockchain Development",
+      ],
+    },
   ];
   return (
-    <div className="wrapper mt-[250px]">
+    <div id="roadmap" className="wrapper mt-[70px] sm:mt-[100px] lg:mt-[250px]">
       <div className="contain justify-center gap-7 items-center flex-col">
         <h2 className="title">ROADMAP</h2>
-        <div className="w-full relative gap-y-6 grid grid-cols-4 grid-rows-[auto__1fr]">
+        <div className="w-full relative gap-y-6 grid-cols-1 grid sm:grid-cols-2 lg:grid-cols-4 grid-rows-[auto__1fr__1fr__1fr__1fr] sm:grid-rows-[auto__1fr__1fr] lg:grid-rows-[auto__1fr]">
           {/* //top line */}
-          <div className="col-start-1 col-end-5 w-full bg-white h-[3px] relative"></div>
+          <div className="col-start-1 col-end-2 sm:col-end-3 lg:col-end-5 w-full bg-white h-[2px] relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="white"
+              className="w-6 h-6 absolute left-full -translate-x-[65%] z-10 top-1/2 -translate-y-1/2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
           {/* //top line */}
           {DATA.map((elem, idx) => {
             return <RoadmapCol {...elem} key={idx + elem.stage} />;

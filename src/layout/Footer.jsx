@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="wrapper mt-[100px] lg:mt-[250px] bg-purpleGr py-[30px] lg:py-[50px]">
+    <footer className="wrapper mt-[80px] lg:mt-[160px] bg-purpleGr py-[30px] lg:py-[50px]">
       <div className="contain lg:flex-row flex-col gap-4 sm:gap-8 justify-between items-center lg:gap-4">
         <p className="uppercase text-white text-lg sm:text-2xl">
           © copyright 2023.All right reserved-$ofloki
