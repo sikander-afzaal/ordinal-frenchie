@@ -5,7 +5,7 @@ const Header = () => {
   const [headerBg, setHeaderBg] = useState(false);
   useEffect(() => {
     const changeBg = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 0) {
         setHeaderBg(true);
       } else {
         setHeaderBg(false);
