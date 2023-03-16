@@ -1,6 +1,7 @@
 import About from "./About";
 import Hero from "./Hero";
 import History from "./History";
+import Roadmap from "./Roadmap";
 import Tokenomics from "./Tokenomics";
 
 const Landing = () => {
@@ -10,6 +11,7 @@ const Landing = () => {
       <History />
       <About />
       <Tokenomics />
+      <Roadmap />
     </>
   );
 };
